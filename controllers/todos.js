@@ -13,7 +13,7 @@ module.exports = {
     },
     createTodo: async (req, res)=>{
         try{
-            // schema is the Todo, with the capital T
+            // schema is the Todo, with the capital T comes from using mongoose instead of MongoClient
             await Todo.create({todo: req.body.todoItem, completed: false})
             console.log('Todo has been added!')
             // refresh the page we were on with a get request
